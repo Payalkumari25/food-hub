@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">FoodApp</string>
+    <string name="password">password</string>
+    <string name="phoneNo">phoneNo</string>
+    <string name="login">login</string>
+    <string name="login_forgot_password">ForgotPassword</string>
+    <string name="signUp">signUp</string>
+    <string name="new_user_registration">New User Registration</string>
+    <string name="minimum_3_character">Minimum 3 Character</string>
+    <string name="email_id">Email id</string>
+    <string name="phone_number">phone number</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="signIn">sign_in</string>
+    <string name="food_app">Food APP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_password">Change Password</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="new_password">New Password</string>
+    <string name="update">Update</string>
+    <string name="changed_password">Changed Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="enter_your_registered_email_to_reset_password">Enter your registered email to reset password</string>
+
+</resources>

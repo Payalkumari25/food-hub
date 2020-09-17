@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <FrameLayout tools:context=".Fragment.VerifyPhoneFragment"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+            <RelativeLayout
+                android:layout_height="200dp"
+                android:layout_width="match_parent"
+                android:background="#5CC09F"
+                android:id="@+id/layoutHead">
+
+                <ImageView
+                    android:layout_height="90dp"
+                    android:layout_width="90dp"
+                    android:background="@drawable/ic_person"
+                    android:id="@+id/img_view"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txt_name"
+                    android:enabled="true"
+                    android:layout_below="@id/img_view"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:text="Verify Phone Number"
+                    android:gravity="center_horizontal" />
+
+                <ProgressBar
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/progressbar_pic"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/layoutPhone"
+                        android:layout_below="@id/layoutHead"
+                        android:visibility="visible"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:animateLayoutChanges="true">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textAlignment="center"
+                        android:text="A verification code will be sent to your number. "
+                        android:gravity="center_horizontal" />
+
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:padding="16dp"
+                            android:gravity="center_vertical">
+
+                        <com.hbb20.CountryCodePicker
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/ccp"
+                            app:ccp_countryPreference="us,in"/>
+
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:id="@+id/et_phone"
+                            android:singleLine="true"
+                            android:inputType="phone"
+                            android:hint="@string/phone_number"
+                            android:maxLength="10"
+                            android:digits="0123456789"/>
+
+                        </LinearLayout>
+
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_width="150dp"
+                        android:id="@+id/btn_send_verification"
+                        android:layout_marginTop="15dp"
+                        android:text="Send Code"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/layoutVerification"
+                    android:layout_below="@id/layoutHead"
+                    android:visibility="invisible"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textAlignment="center"
+                    android:text="Please wait while we automatically verify your number. If auto verification is not working you can enter the code received as well."
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center_horizontal" />
+
+                <ProgressBar
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/progressbar"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"/>
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/et_code"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textAlignment="center"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:hint="Verification Code"
+                    android:gravity="center_horizontal" />
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:id="@+id/btn_verify"
+                    android:layout_marginTop="15dp"
+                    android:text="Verify"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+        </RelativeLayout>
+
+</FrameLayout>
